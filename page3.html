@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartfelt Apology</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="fade-in" data-next-page="page4.html">
+    <header>
+        <h1>Topic: <strong>Forgiveness & Apology</strong></h1>
+    </header>    
+    <div class="main-container">
+        <h1>Apology</h1>
+        <p id="apology-msg"></p>
+        <p class="hidden-msg">Click anywhere to continue...</p>
+    </div>
+    <script>
+        const text = "I made a mistake, and I hurt you. I didn't think about how my actions would affect you, and for that, I truly apologize. You mean a lot to me, and the last thing I wanted was to make you feel upset or betrayed. I know saying sorry doesn’t erase what happened, but I genuinely want to make things right and rebuild the trust between us. Please forgive me. 🙏";
+        let i = 0;
+
+        function typeEffect() {
+            if (i < text.length) {
+                document.getElementById("apology-msg").textContent += text.charAt(i);
+                i++;
+                setTimeout(typeEffect, 50);
+            }
+        }
+
+        typeEffect();
+    </script>
+</body>
+</html>
